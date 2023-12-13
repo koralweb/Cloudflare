@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3246f5b7-6f42-49be-bb4a-cc126a5ec580" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/onexpro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/Server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/babel.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/components/MainComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/components/Tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/components/Tr/DNS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/components/Tr/SSL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/components/Tr/Zone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/functions/sendCreateZoneRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/functions/sendUpdateSSLRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/functions/setCreateDNSRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/src/mobx/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/onexpro" beforeDir="false" afterPath="$PROJECT_DIR$/Server/onexpro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/onexpro/Gemfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/onexpro/Gemfile.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/onexpro/README.md" beforeDir="false" />
@@ -131,6 +115,23 @@
       <change beforePath="$PROJECT_DIR$/Server/onexpro/jest.config.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/onexpro/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/onexpro/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/Server/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/Server/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/dist/65e2f36f5906d7899cd2.main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/dist/65e2f36f5906d7899cd2.main.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Site/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Site/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/components/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/components/MainComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/components/Tr/DNS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/components/Tr/DNS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/components/Tr/SSL.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/components/Tr/SSL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/components/Tr/Zone.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/components/Tr/Zone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/functions/sendCreateZoneRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/functions/sendCreateZoneRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/functions/sendUpdateSSLRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/functions/sendUpdateSSLRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/functions/setCreateDNSRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/functions/setCreateDNSRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/mobx/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/mobx/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Site/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,25 +165,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/fort/CloudflareAPI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fort/CloudflareAPI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -190,6 +191,12 @@
         <entry key="com.haulmont.rcb.reactInspector" value="false" />
       </map>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Site" />
+      <recent name="$PROJECT_DIR$/Site/dist" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -203,7 +210,8 @@
       <workItem from="1692854241818" duration="2070000" />
       <workItem from="1697474527266" duration="3569000" />
       <workItem from="1698565802907" duration="2418000" />
-      <workItem from="1702311558801" duration="3059000" />
+      <workItem from="1702311558801" duration="3350000" />
+      <workItem from="1702454198110" duration="5301000" />
     </task>
     <servers />
   </component>

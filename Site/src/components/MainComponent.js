@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 import Table from 'react-bootstrap/Table';
 import Tr from './Tr'
 import Dropdown from 'react-bootstrap/Dropdown';
-// import {AccountID, email, GlobalAPIKey} from '../config'
+import config from "../mobx/config";
+import {observer} from "mobx-react-lite";
 
 const servers = {
     adminVPS: '91.200.84.27',
@@ -15,33 +16,29 @@ function MainComponent() {
     const [bigInput, setBigInput] = useState('')
     const [Server, setServer] = useState('')
 
-    const [AccountID, setAccountID] = useState('')
-    const [email, setEmail] = useState('')
-    const [GlobalAPIKey, setGlobalAPIKey] = useState('')
-
     useEffect(() => {
         const newArr = bigInput.split(' ').filter(el => el)
         setSiteList(newArr)
     }, [bigInput])
 
     const renderTr = () => {
-        return siteList.map((site, index) => (
+        return Server ? siteList.map((site, index) => (
             <Tr
                 key={site}
                 site={site}
-                email={email}
-                GlobalAPIKey={GlobalAPIKey}
-                AccountID={AccountID}
+                email={config.email}
+                GlobalAPIKey={config.GlobalAPIKey}
+                AccountID={config.AccountID}
                 Server={Server}
                 index={index + 1}
             />
-        ))
+        )) : <></>
     }
 
 
     return (
         <div>
-            <div>Список сайтов</div>
+            <div>Список сайтов для Cloudflare</div>
             <input
                 placeholder={'Sites'}
                 style={styles.bigInput}
@@ -51,23 +48,23 @@ function MainComponent() {
             <input
                 style={styles.input}
                 type={'text'}
-                value={email}
+                value={config.email}
                 placeholder={'Email'}
-                onInput={(e) => setEmail(e.target.value)}
+                onInput={(e) => config.setEmail(e.target.value)}
             />
             <input
                 style={styles.input}
                 type={'text'}
-                value={GlobalAPIKey}
-                placeholder={'GlobalAPIKey'}
-                onInput={(e) => setGlobalAPIKey(e.target.value)}
-            />
-            <input
-                style={styles.input}
-                type={'text'}
-                value={AccountID}
+                value={config.AccountID}
                 placeholder={'AccountID'}
-                onInput={(e) => setAccountID(e.target.value)}
+                onInput={(e) => config.setAccountID(e.target.value)}
+            />
+            <input
+                style={styles.input}
+                type={'text'}
+                value={config.GlobalAPIKey}
+                placeholder={'GlobalAPIKey'}
+                onInput={(e) => config.setGlobalAPIKey(e.target.value)}
             />
             <div style={{marginBottom: 10, marginLeft: 10}}>
                 <Dropdown>
@@ -77,11 +74,14 @@ function MainComponent() {
 
                     <Dropdown.Menu>
                         <Dropdown.Item
-                            onClick={() => setServer(servers.adminVPS)}>AdminVPS webarchive - {servers.adminVPS}</Dropdown.Item>
+                            onClick={() => setServer(servers.adminVPS)}>AdminVPS webarchive
+                            - {servers.adminVPS}</Dropdown.Item>
                         <Dropdown.Item
-                            onClick={() => setServer(servers.adminVPS2)}>AdminVPS wordpress - {servers.adminVPS2}</Dropdown.Item>
+                            onClick={() => setServer(servers.adminVPS2)}>AdminVPS wordpress
+                            - {servers.adminVPS2}</Dropdown.Item>
                         <Dropdown.Item
-                            onClick={() => setServer(servers.appletec2)}>Appletec webarchive - {servers.appletec2}</Dropdown.Item>
+                            onClick={() => setServer(servers.appletec2)}>Appletec webarchive
+                            - {servers.appletec2}</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
@@ -125,4 +125,4 @@ const styles = {
     }
 }
 
-export default MainComponent;
+export default observer(MainComponent);

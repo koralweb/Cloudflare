@@ -1,6 +1,5 @@
-import {email, GlobalAPIKey} from "../config";
-
-const sendUpdateSSLRequest = (zoneId, type, setValue) => {
+const sendUpdateSSLRequest = (config, zoneId, type, setValue) => {
+    const {email, GlobalAPIKey} = config
     fetch(`http://${location.hostname}:8888/api/updateSSL`, {
         method: 'POST',
         body: JSON.stringify({

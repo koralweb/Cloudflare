@@ -1,6 +1,5 @@
-import {AccountID, email, GlobalAPIKey} from "../config";
-
-const sendCreateZoneRequest = (site, setZoneId, setAddZoneLoad, setDNSServers) => {
+const sendCreateZoneRequest = (config, site, setZoneId, setAddZoneLoad, setDNSServers) => {
+    const {AccountID, email, GlobalAPIKey} = config
     fetch(`http://${location.hostname}:8888/api/createZone`, {
         method: 'POST',
         body: JSON.stringify({

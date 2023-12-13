@@ -1,6 +1,5 @@
-import {AccountID, email, GlobalAPIKey} from "../config";
-
-const sendCreateDNSRequest = async (Server, site, zoneId, name) => {
+const sendCreateDNSRequest = async (config, Server, site, zoneId, name) => {
+    const {AccountID, email, GlobalAPIKey} = config
     const response = await fetch(`http://${location.hostname}:8888/api/updateDNS`, {
         method: 'POST',
         body: JSON.stringify({

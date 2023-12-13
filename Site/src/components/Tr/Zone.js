@@ -1,13 +1,16 @@
 import React, {useState} from "react";
 import Spinner from 'react-bootstrap/Spinner';
 import sendCreateZoneRequest from "../../functions/sendCreateZoneRequest";
+import config from "../../mobx/config";
+import {observer} from "mobx-react-lite";
+
 
 const Zone = ({site, zoneId, setZoneId, setDNSServers}) => {
     const [addZoneLoad, setAddZoneLoad] = useState(false)
 
     const clickButton = () => {
         setAddZoneLoad(true)
-        sendCreateZoneRequest(site, setZoneId, setAddZoneLoad, setDNSServers)
+        sendCreateZoneRequest(config, site, setZoneId, setAddZoneLoad, setDNSServers)
     }
 
     const render = () => {
@@ -24,4 +27,4 @@ const Zone = ({site, zoneId, setZoneId, setDNSServers}) => {
 
 }
 
-export default Zone
+export default observer(Zone)

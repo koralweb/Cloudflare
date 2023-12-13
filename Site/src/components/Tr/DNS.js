@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Spinner from 'react-bootstrap/Spinner';
 import setCreateDNSRequest from "../../functions/setCreateDNSRequest";
+import config from "../../mobx/config";
 
 const DNS = ({Server, site, zoneId}) => {
     const [main, setMain] = useState(false)
@@ -12,7 +13,7 @@ const DNS = ({Server, site, zoneId}) => {
     const clickButton = (name) => {
         if (name === '@') setMainLoad(true)
         if (name === 'www') setWwwLoad(true)
-        setCreateDNSRequest(Server, site, zoneId, name)
+        setCreateDNSRequest(config, Server, site, zoneId, name)
             .then(data => {
                 if (name === '@') setMain('@')
                 if (name === 'www') setWww('www')
