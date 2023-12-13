@@ -1,9 +1,9 @@
 import {action, makeObservable, observable} from "mobx";
 
 class Config {
-    email = 'niceguy4charm@gmail.com'
-    AccountID = 'e134c24ec11cc227dbb3ffbf534e1db7'
-    GlobalAPIKey = 'b0acb5a7e829712e0f5228507e0ce515a6f21'
+    email = ''
+    AccountID = ''
+    GlobalAPIKey = ''
 
     constructor(user, access, setUser, setAccess) {
         makeObservable(this, {
